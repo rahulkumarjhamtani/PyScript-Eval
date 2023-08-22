@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <h1>PyScript REPL (Read Eval Print Loop)</h1>
+    <i>Tip: press Shift-ENTER to evaluate a cell</i>
+    <py-script> print('Execute Python Code here!!') </py-script>
+    <py-config>
+        plugins = [
+          "https://pyscript.net/latest/plugins/python/py_tutor.py"
+        ]
+        [[fetch]]
+        files = ["./antigravity.py"]
+    </py-config>
+    <div style="margin-right: 3rem">
+        <py-repl id="my-repl" auto-generate="true"> </py-repl>
+    </div>
+</body>
+</html>
